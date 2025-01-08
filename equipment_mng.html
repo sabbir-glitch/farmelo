@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipment Management - Agrimart</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa; /* Light background */
+      color: #343a40; /* Dark text */
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .navbar {
+      background-color: #28a745 !important; /* Green navbar */
+    }
+    .navbar-brand, .nav-link {
+      color: #ffffff !important; /* White text */
+    }
+    .table-container {
+      margin-top: 30px;
+      flex: 1; /* Ensure it takes available space */
+    }
+    .table {
+      background-color: #ffffff; /* White background for table */
+    }
+    .btn-success {
+      margin-right: 10px;
+    }
+    footer {
+      background-color: #28a745; /* Green footer */
+      color: #ffffff; /* White text */
+      padding: 20px 0;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="admin.html">Agrimart Admin</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="admin.html">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="equipment_management.html">Equipment Management</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logout.html">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Equipment Management Section -->
+  <div class="container table-container">
+    <h2 class="text-center mb-4">Equipment Management</h2>
+
+    <!-- Add Equipment Button -->
+    <div class="text-right mb-3">
+      <button class="btn btn-success" data-toggle="modal" data-target="#addEquipmentModal">Add Equipment</button>
+    </div>
+
+    <!-- Equipment Table -->
+    <table class="table table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th>#</th>
+          <th>Equipment Name</th>
+          <th>Category</th>
+          <th>Price/Day</th>
+          <th>Stock</th>
+          <th>Condition</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Tractor</td>
+          <td>Heavy Equipment</td>
+          <td>$150</td>
+          <td>10</td>
+          <td>Good</td>
+          <td>
+            <button class="btn btn-warning btn-sm">Edit</button>
+            <button class="btn btn-danger btn-sm">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Cultivator</td>
+          <td>Soil Preparation</td>
+          <td>$75</td>
+          <td>5</td>
+          <td>Excellent</td>
+          <td>
+            <button class="btn btn-warning btn-sm">Edit</button>
+            <button class="btn btn-danger btn-sm">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Seed Drill</td>
+          <td>Planting</td>
+          <td>$50</td>
+          <td>8</td>
+          <td>Fair</td>
+          <td>
+            <button class="btn btn-warning btn-sm">Edit</button>
+            <button class="btn btn-danger btn-sm">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Add Equipment Modal -->
+  <div class="modal fade" id="addEquipmentModal" tabindex="-1" role="dialog" aria-labelledby="addEquipmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addEquipmentModalLabel">Add New Equipment</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="equipmentName">Equipment Name</label>
+              <input type="text" class="form-control" id="equipmentName" placeholder="Enter equipment name">
+            </div>
+            <div class="form-group">
+              <label for="equipmentCategory">Category</label>
+              <select class="form-control" id="equipmentCategory">
+                <option>Heavy Equipment</option>
+                <option>Soil Preparation</option>
+                <option>Planting</option>
+                <option>Harvesting</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="pricePerDay">Price/Day</label>
+              <input type="number" class="form-control" id="pricePerDay" placeholder="Enter price per day">
+            </div>
+            <div class="form-group">
+              <label for="stock">Stock</label>
+              <input type="number" class="form-control" id="stock" placeholder="Enter stock quantity">
+            </div>
+            <div class="form-group">
+              <label for="condition">Condition</label>
+              <input type="text" class="form-control" id="condition" placeholder="Enter condition (e.g., New, Good)">
+            </div>
+            <button type="submit" class="btn btn-primary">Add Equipment</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <p>&copy; 2024 Agrimart. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

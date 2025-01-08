@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agrimart - Rental Booking</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #ffffff; /* White background */
+      color: #000000; /* Black text */
+    }
+    .header {
+      background-color: #28a745; /* Green background */
+      color: #ffffff; /* White text */
+      padding: 20px 0; /* Padding top and bottom */
+      text-align: center; /* Center align text */
+    }
+    .form-container {
+      border: 1px solid #28a745; /* Green border */
+      border-radius: 5px; /* Rounded corners */
+      padding: 20px; /* Padding */
+    }
+    footer {
+      background-color: #28a745; /* Green footer */
+      color: #ffffff; /* White text for footer */
+      padding: 20px 0;
+      margin-top: 50px; /* Increased margin */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h2>Rental Booking</h2>
+  </div>
+
+  <!-- Content area with booking form -->
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="form-container">
+          <form>
+            <div class="form-group">
+              <label for="equipment">Select Equipment</label>
+              <select class="form-control" id="equipment">
+                <option>Choose...</option>
+                <option>Equipment 1</option>
+                <option>Equipment 2</option>
+                <option>Equipment 3</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="date">Rental Date</label>
+              <input type="date" class="form-control" id="date" placeholder="mm/dd/yyyy">
+            </div>
+            <div class="form-group">
+              <label for="duration">Duration (in days)</label>
+              <input type="number" class="form-control" id="duration" placeholder="Enter duration">
+            </div>
+            <div class="form-group">
+              <label for="totalCost">Total Cost ($)</label>
+              <input type="text" class="form-control" id="totalCost" placeholder="Total cost will be calculated">
+            </div>
+            <div class="form-group">
+              <label for="note">Additional Note</label>
+              <textarea class="form-control" id="note" rows="3" placeholder="Any additional notes or instructions"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <p>&copy; 2024 Agrimart. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript libraries -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

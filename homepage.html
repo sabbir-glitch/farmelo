@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agrimart - Agricultural Equipment Rental</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #ffffff; /* White background */
+      color: #000000; /* Black text */
+    }
+    .navbar {
+      background-color: #28a745 !important; /* Green navbar */
+    }
+    .navbar-brand, .nav-link {
+      color: #ffffff !important; /* White text for navbar */
+    }
+    .navbar-brand img {
+      max-height: 40px; /* Adjust logo height */
+      margin-right: 10px; /* Add some spacing */
+    }
+    .jumbotron {
+      background: url('img/bc.jpg') left center/cover no-repeat;
+      color: #ffffff; /* White text */
+      text-align: left;
+      padding: 150px 0; /* Increased padding */
+      margin-bottom: 0;
+      height: 600px; /* Increased height */
+      position: relative;
+    }
+    .jumbotron::after {
+      content: "Harvest more, hassle less: Rent smarter with our platform.";
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .equipment-card {
+      border: 1px solid #28a745;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    .equipment-card img {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      height: 250px; /* Increased height */
+    }
+    .equipment-card .card-body {
+      background-color: #ffffff; /* White background for card body */
+    }
+    .about-contact-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    .about-contact-box {
+      background-color: #28a745; /* Green background */
+      color: #ffffff; /* White text */
+      border-radius: 15px;
+      padding: 20px;
+      flex: 1;
+      margin-right: 10px;
+    }
+    .about-contact-box:hover {
+      background-color: #218838; /* Darker green on hover */
+      cursor: pointer;
+    }
+    footer {
+      background-color: #28a745; /* Green footer */
+      color: #ffffff; /* White text for footer */
+      padding: 20px 0;
+      margin-top: 50px; /* Increased margin */
+    }
+    /* Customer Reviews Section */
+#customer-reviews {
+  margin-top: 40px; /* Space above the reviews */
+}
+
+#customer-reviews .about-contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#customer-reviews .about-contact-box {
+  background-color: #28a745; /* Green background */
+  color: #ffffff; /* White text */
+  border-radius: 15px;
+  padding: 20px;
+  flex: 1;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+#customer-reviews .about-contact-box:hover {
+  background-color: #218838; /* Darker green on hover */
+  cursor: pointer;
+}
+
+#customer-reviews .stars {
+  font-size: 20px; /* Adjust star size */
+  color: #ffd700; /* Gold color for stars */
+}
+
+.add-review {
+  text-align: center;
+  margin-top: 20px;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="img/logo.png" alt="Agrimart Logo"> <!-- Company logo -->
+            Agrimart
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="homepage.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="customerpage.html">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="admin.html">Admin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="supplier2.html">Supplier</a>
+                </li>
+                <!-- Add links to other pages as needed -->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+  <!-- Jumbotron with Company Motto -->
+  <div class="jumbotron">
+    <!-- Company motto displayed in the image -->
+  </div>
+
+  <!-- Equipment Showcase -->
+  <section id="equipment-showcase" class="container">
+    <h2 class="text-center mb-4">Equipment Showcase</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="equipment-card">
+          <img src="img/balers.jpg" class="card-img-top" alt="Balers">
+          <div class="card-body">
+            <h5 class="card-title">Balers</h5>
+            <p class="card-text">$ Price per Day</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="equipment-card">
+          <img src="img/bcc.jpg" class="card-img-top" alt="Tractor">
+          <div class="card-body">
+            <h5 class="card-title">Tractor</h5>
+            <p class="card-text">$ Price per Day</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="equipment-card rounded-lg">
+          <img src="img/Cultivators.jpg" class="card-img-top" alt="cultivatorsr">
+          <div class="card-body">
+            <h5 class="card-title">Cultivator</h5>
+            <p class="card-text">$ Price per Day</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- About Us and Contact Us Section -->
+<section id="about-contact" class="container">
+  <div class="about-contact-container">
+    <!-- About Us Box -->
+    <div class="about-contact-box">
+      <h3>About Us</h3>
+      <p>At Agrimart, we're dedicated to transforming agriculture through technology. Our platform connects farmers with top-quality equipment, making rentals easy and hassle-free. With a focus on sustainability and efficiency, we're committed to supporting the growth of farmers worldwide. Join us in shaping the future of farming.</p>
+    </div>
+    <!-- Contact Us Box -->
+    <div class="about-contact-box">
+      <h3>Contact Us</h3>
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" placeholder="First Name">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text" class="form-control" id="phoneNumber" placeholder="Phone Number">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- Customer Reviews Section -->
+<section id="customer-reviews" class="container">
+  <div class="about-contact-container">
+    <!-- Review Box 1 -->
+    <div class="about-contact-box">
+      <h3>John Doe</h3>
+      <span class="stars">★★★★★</span>
+      <p class="review-text">The rental process was smooth, and the equipment was in excellent condition. Highly recommend!</p>
+    </div>
+    <!-- Review Box 2 -->
+    <div class="about-contact-box">
+      <h3>Jane Smith</h3>
+      <span class="stars">★★★★☆</span>
+      <p class="review-text">Great service overall, but the website could be a bit faster. Would still use again!</p>
+    </div>
+    <!-- Review Box 3 -->
+    <div class="about-contact-box">
+      <h3>Ahmed Khan</h3>
+      <span class="stars">★★★★★</span>
+      <p class="review-text">Amazing experience! The tutorials were helpful, and I found exactly what I needed.</p>
+    </div>
+  </div>
+
+  <!-- Add Review Button -->
+  <div class="add-review">
+    <button class="btn btn-primary" onclick="alert('Feature coming soon!')">Add Your Review</button>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="text-center">
+  <div class="container"> <!-- Use container-fluid to ensure full width -->
+    <p>&copy; 2024 Agrimart. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
